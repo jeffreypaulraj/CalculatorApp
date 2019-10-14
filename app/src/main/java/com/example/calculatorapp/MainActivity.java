@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -230,36 +231,48 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 double answer = getSolution();
-                System.out.println(answer);
+                answerString = "" + answer;
+                //  System.out.println(answer);
                 answerField.setText("" + answer);
             }
         });
     }
 
     public double getSolution(){
-       double Solution = 0;
-        // if(operationList.size() == 0){
-         //   return
-        //}
-        double currentNumber = 0.0;
+        double Solution = 0;
+
         if(numberList.size() == 0){
             return 0;
         }
-        for(int i = 1; i < numberList.size(); i++){
-            if(numberList.get(i-1) != null && numberList.get(i) != null){
-                currentNumber = 10*numberList.get(i-1) + numberList.get(i);
-            }
-            else if (numberList.get(i-1) != null && numberList.get(i) == null){
-                condensedNumberList.add(currentNumber);
-                    currentNumber = numberList.get(i+1);
-            }
+        System.out.println("String: " + answerString);
+
+        StringTokenizer answerTokenizer = new StringTokenizer(answerString, "+-*/");
+        while(answerTokenizer.hasMoreTokens()){
+            String currentNumString = answerTokenizer.nextToken();
+            System.out.println(currentNumString);
+            double currentNum = Double.parseDouble(currentNumString);
+            condensedNumberList.add(currentNum);
+        }
+
+
+
+        for(int i = 0; i < condensedNumberList.size();i++){
+            System.out.println(condensedNumberList.get(i));
+        }
+
+
+
+
+        for(int i = operationList.size() - 1; i >= 0; i--){
+           if(operationList.get(i) == null){
+               operationList.remove(i);
+           }
         }
 
         for(int i = 0; i < operationList.size(); i++){
-            if(operationList.get(i) == null){
-                operationList.remove(i);
-            }
+            System.out.println(i + " " + operationList.get(i));
         }
+
 
         Solution = condensedNumberList.get(0);
         for(int i = 1; i < condensedNumberList.size(); i++){
@@ -278,6 +291,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+
+        condensedNumberList = new ArrayList<>();
+        operationList = new ArrayList<>();
+        numberList = new ArrayList<>();
         return Solution;
     }
 }
