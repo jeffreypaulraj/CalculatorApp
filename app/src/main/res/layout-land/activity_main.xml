@@ -20,11 +20,41 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Button" />
+
+        <Button
+            android:id="@+id/id_squareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="x^2"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_sinButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="sin"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_piButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="π"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_oneButton"
@@ -85,7 +115,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="e" />
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/id_cubeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="x^3"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_cosButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="cos"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_eButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="e"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_fourButton"
@@ -138,11 +198,41 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RAND" />
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/id_sqrtButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="√x"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_tanButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="tan"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_randButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="RAND"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_sevenButton"
@@ -194,11 +284,40 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="." />
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/id_plusMinusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="+/-"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_decimalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="."
+            android:textSize="36sp"
+            android:textAlignment="center"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_clearButton"
