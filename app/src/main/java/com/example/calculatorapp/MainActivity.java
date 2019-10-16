@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     TextView answerField;
 
     String answerString;
+    boolean error;
     ArrayList<String> operationList;
     ArrayList<Double> condensedNumberList;
     @Override
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         answerString = "";
         operationList = new ArrayList<>();
         condensedNumberList = new ArrayList<>();
+        error = false;
 
         buttonOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -190,7 +192,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 double answer = getSolution();
                 answerString = "" + answer;
-                answerField.setText("" + answer);
+                if(error == true){
+                    answerField.setText("Error");
+                }
+                else {
+                    answerField.setText("" + answer);
+                }
             }
         });
     }
@@ -198,9 +205,7 @@ public class MainActivity extends AppCompatActivity {
     public double getSolution(){
         double Solution = 0;
 
-        if(condensedNumberList.size() == 0){
-            return 0;
-        }
+        error = false;
         System.out.println("String: " + answerString);
 
         StringTokenizer answerTokenizer = new StringTokenizer(answerString, "+-*/");
@@ -210,7 +215,9 @@ public class MainActivity extends AppCompatActivity {
             double currentNum = Double.parseDouble(currentNumString);
             condensedNumberList.add(currentNum);
         }
-
+        if(condensedNumberList.size() == 0){
+            return 0;
+        }
         for(int i = operationList.size() - 1; i >= 0; i--){
             if(operationList.get(i) == null){
                 operationList.remove(i);
@@ -233,6 +240,12 @@ public class MainActivity extends AppCompatActivity {
                 Solution /= condensedNumberList.get(i);
             }
 
+            if(operand == "/" && condensedNumberList.get(i) == 0){
+                error = true;
+            }
+        }
+        if(operationList.size() >= condensedNumberList.size()){
+            error = true;
         }
         condensedNumberList = new ArrayList<>();
         operationList = new ArrayList<>();
