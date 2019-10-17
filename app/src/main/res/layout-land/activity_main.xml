@@ -20,11 +20,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/id_ePowerXButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="e^x"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_squareButton"
@@ -33,6 +37,16 @@
             android:layout_centerVertical="true"
             android:layout_weight="1"
             android:text="x^2"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_sinhButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="sinh"
             android:textSize="16sp"
             android:background="@drawable/round_button_dark_gray" />
 
@@ -111,11 +125,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/id_tenPowerXButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="10^x"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_cubeButton"
@@ -124,6 +141,16 @@
             android:layout_centerVertical="true"
             android:layout_weight="1"
             android:text="x^3"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_coshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="cosh"
             android:textSize="16sp"
             android:background="@drawable/round_button_dark_gray" />
 
@@ -144,6 +171,7 @@
             android:layout_centerVertical="true"
             android:layout_weight="1"
             android:text="e"
+            android:textAllCaps="false"
             android:textSize="16sp"
             android:background="@drawable/round_button_dark_gray" />
 
@@ -198,11 +226,14 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/id_lnButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="ln"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_sqrtButton"
@@ -213,6 +244,16 @@
             android:text="√x"
             android:textSize="16sp"
             android:background="@drawable/round_button_dark_gray" />
+
+        <Button
+            android:id="@+id/id_tanhButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="tanh"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray"/>
 
         <Button
             android:id="@+id/id_tanButton"
@@ -284,18 +325,24 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/id_logButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="log"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/id_cubeRootButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="3√x"
+            android:textSize="16sp"
+            android:background="@drawable/round_button_dark_gray" />
 
         <Button
             android:id="@+id/id_plusMinusButton"
@@ -303,8 +350,19 @@
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_weight="1"
+            android:background="@drawable/round_button_dark_gray"
             android:text="+/-"
-            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/id_degreeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="RAD"
+            android:textSize="16sp"
             android:textAlignment="center"
             android:background="@drawable/round_button_dark_gray" />
 
