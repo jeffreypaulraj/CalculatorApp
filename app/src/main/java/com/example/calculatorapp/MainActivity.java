@@ -456,8 +456,25 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        for(int i = 0; i < operationList.size(); i++){
+            double temp = 0;
+            String operand = operationList.get(i);
+            if(operand == "*" || operand == "/"){
+                if(operand == "*"){
+                    temp = condensedNumberList.get(i)*condensedNumberList.get(i+1);
+                }
+                else{
+                    temp = condensedNumberList.get(i)/condensedNumberList.get(i+1);
+                }
+                condensedNumberList.remove(i+1);
+                condensedNumberList.remove(i);
+                operationList.remove(i);
+                condensedNumberList.add(i, temp);
+            }
+        }
         Solution = condensedNumberList.get(0);
         for(int i = 1; i < condensedNumberList.size(); i++){
+
             String operand = operationList.get(i-1);
             if(operand == "+"){
                 Solution += condensedNumberList.get(i);
